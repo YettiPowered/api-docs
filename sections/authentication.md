@@ -43,27 +43,18 @@ X-Authorization: test:b2132f1dec3f2fd6f718f268be7df11001ad57ad143f3f21ba819e65de
 
 The Yetti API may return any of the HTTP/1.1 response codes defined by RFC-2616 Section 10.
 
-```xml
-HTTP/1.1 200 OK
-Server: nginx
-Date: Thu, 23 Feb 2012 14:02:01 GMT
-Content-Type: text/xml; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-Expires: Thu, 01 Jan 1970 00:00:00 +0000
-Cache-Control: no-cache, no-store, must-revalidate
-
-<?xml version="1.0"?>
-<yetti>
-  <types>
-    <id>1</id>
-    <name>Blog</name>
-    <nameSingular>article</nameSingular>
-    <urlPath/>
-    <isPurchasable/>
-    <isAssetType/>
-    <collectionTypeId>1</collectionTypeId>
-  </types>
-</yetti>
+```json
+{
+    "types": [
+        {
+            "collectionTypeId": "1", 
+            "id": "1", 
+            "isAssetType": "0", 
+            "isPurchasable": "0", 
+            "name": "Blog", 
+            "nameSingular": "blog", 
+            "urlPath": ""
+        }
+    ]
+}
 ```
