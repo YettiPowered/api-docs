@@ -29,20 +29,20 @@ The authentication and signing process is explained in more detail in section 3.
 
 ## Resources
 
-Most individual pieces of content in Yetti are known as “resources”. Resources can usually be created, updated and deleted, unless specific permissions dictate otherwise.
+Most individual pieces of content in Yetti are known as "resources". Resources can usually be created, updated and deleted, unless specific permissions dictate otherwise.
 
 ### Items
 
-Items are the “bread and butter” resources in Yetti. Everything from blog articles to FAQs to purchasable products are usually item resources.
-Items are always created with a particular “type”, and this type is dynamically configured with properties, such as “Name”, “Description”, etc, based on the needs of the particular website.
+Items are the "bread and butter" resources in Yetti. Everything from blog articles to FAQs to purchasable products are usually item resources.
+Items are always created with a particular "type", and this type is dynamically configured with properties, such as "Name", "Description", etc, based on the needs of the particular website.
 
-### Categories
+### Categories
 
 Categories (sometimes referred to as collections) are used to organise items. 
 Each type of item has an independent category hierarchy which itself acts a lot like a directory tree on a computer file system. 
 Items can be placed into one or more categories.
 
-### Pages
+### Pages
 
 Pages are basic content manageable resources.
 
@@ -59,4 +59,4 @@ Groups can be used to organise users into sets. This can be useful when applying
 The Yetti API is implemented using a ReSTful web service interface. 
 Resources can be accessed using a unique identifier (URI) and manipulated by making requests using one of the available HTTP verbs (GET, POST, PUT, DELETE).
 
-Web service requests are always identified by the URI suffix “`.ws`”.
+Web service requests are always identified by the URI suffix "`.ws`".
