@@ -18,7 +18,7 @@ Note that it is very important that you keep your private key safe and never sen
 out or intercepting your private key, please contact us immediately so that we can revoke the key and provide you with a new one.
 
 Example request signing:
-```xml
+```
 requestUri = "https://yoursite.secure.yetti.co.uk/...ws" +
              "?paramKey=paramValue" + 
              "&timestamp=" + currentTime;
@@ -33,7 +33,7 @@ Please note that you must include all parameters in the request URI before signi
 
 To authenticate, you must provide a timestamp parameter and an X-Authorization header comprising your username and request signature.
 
-```xml
+```
 GET /1.0/Items.ws?timestamp=1330005721 HTTP/1.1
 Host: demo.secure.yetti.co.uk
 X-Authorization: test:b2132f1dec3f2fd6f718f268be7df11001ad57ad143f3f21ba819e65de5d151d
