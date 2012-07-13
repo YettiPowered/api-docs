@@ -25,7 +25,7 @@ Authentication is the process of proving your identity to the system.
 Identity is an important factor when performing web service requests, as it is your identify which governs what access you have and what operations you are allowed to perform.
 
 Some basic Yetti API operations don't require authentication, however any method which alters data, and most which return data specific to your system do require particular privileges. 
-The authentication and signing process is explained in more detail in the [authentication guide](https://github.com/YettiPowered/api-docs/blob/master/sections/authentication.md)
+The authentication and signing process is explained in more detail in the [authentication guide](https://github.com/YettiPowered/api-docs/blob/master/sections/authentication.md).
 
 ## Resources
 
@@ -61,7 +61,7 @@ Resources can be accessed using a unique identifier (URI) and manipulated by mak
 
 Web service requests are always identified by the URI suffix "`.ws`".
 
-##ÊRequest / Reponse types
+## Request / Reponse types
 
 The Yetti API supports both the JSON and XML data serialization formats. The request format is specified in a query string appended to the 
 request URI (i.e. format=json). The default format is XML, but all requests support both formats, 
