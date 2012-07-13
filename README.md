@@ -69,7 +69,7 @@ As of the most recent API version (2), Yetti supports the JSON serialization for
 
 The following examples show how to use cURL to interface with the Yetti API.
 
-#### cURL request/response with JSON
+#### cURL request/response
 ```
 curl -D - \ https://demo.secure.yetti.co.uk/1.0/Sample/Test.ws?format=json
 
@@ -83,7 +83,7 @@ Vary: Accept-Encoding
 Expires: Thu, 01 Jan 1970 00:00:00 +0000
 Cache-Control: no-cache, no-store, must-revalidate
 ```
-
+JSON response:
 ```json
 {"test":"Hello world"}
 ```
