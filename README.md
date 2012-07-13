@@ -64,7 +64,7 @@ Web service requests are always identified by the URI suffix "`.ws`".
 ## Request / Reponse types
 
 The Yetti API supports both the JSON and XML data serialization formats. The request format is specified in a query string appended to the 
-request URI (i.e. format=json). The default format is XML, but all requests support both formats, 
+request URI (i.e. `format=json`). The default format is XML, but all requests support both formats, 
 even where examples are only provided in one format in this document.
 
 ### cURL examples
