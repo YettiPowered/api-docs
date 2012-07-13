@@ -9,26 +9,18 @@
 
 These sample APIs are intended for testing. No authentication is required.
 
-### Hello world in XML
-
-```xml
-<?xml version="1.0"?>
-<yetti>
-  <test>Hello world</test>
-</yetti>
-```
-
 ### Hello world in JSON
 
 ```json
-{"test":"Hello world"}
+{
+    "test": "Hello world"
+}
 ```
 
 ### Hello Sam in XML
 
-```xml
-<?xml version="1.0"?>
-<yetti>
-  <hello>Hello Sam</hello>
-</yetti>
+```json
+{
+    "hello": "Hello sam"
+}
 ```
