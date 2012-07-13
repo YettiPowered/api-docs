@@ -113,7 +113,7 @@ Cache-Control: no-cache, no-store, must-revalidate
 
 To reduce load on the service, list operations will return a maximum of 30 resources at a time. To navigate the list, a page parameter can be provided in the URI, e.g. `?page=2`.
 
-##ÊAPI version
+## API version
 
 The Yetti API uses a URI versioning scheme. The first element of the path contains the target version number (e.g. `https://demo.secure.yetti.co.uk/1.0/...`). 
 If a version number is not provided, the latest version is assumed.
@@ -121,6 +121,10 @@ If a version number is not provided, the latest version is assumed.
 New features and functionality that do not break API-compatibility will be introduced in the current version of the API and the URI will remain unchanged. 
 Any feature or functionality changes that would necessitate a break in API-compatibility will require a new version, which will result in the URI version 
 being updated accordingly. When new API versions are released, older versions will be marked as `DEPRECATED`.
+
+# Available APIs
+
+[Sample](https://github.com/YettiPowered/api-docs/blob/master/sections/sample.md)
 
 # Contributing
 
