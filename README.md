@@ -63,37 +63,14 @@ Web service requests are always identified by the URI suffix "`.ws`".
 
 ## Request / Reponse types
 
-The Yetti API supports both the JSON and XML data serialization formats. The request format is specified in a query string appended to the 
-request URI (i.e. `format=json`). The default format is XML, but all requests support both formats, 
-even where examples are only provided in one format in this document.
+As of the most recent API version (2), Yetti supports the JSON serialization format only.
 
 ### cURL examples
 
 The following examples show how to use cURL to interface with the Yetti API.
 
-#### cURL request/response with XML (default)
-
-```xml
-curl -D - https://demo.secure.yetti.co.uk/1.0/Sample/Test.ws
-
-HTTP/1.1 200 OK
-Server: nginx
-Date: Thu, 23 Feb 2012 09:29:30 GMT
-Content-Type: text/xml; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-Expires: Thu, 01 Jan 1970 00:00:00 +0000
-Cache-Control: no-cache, no-store, must-revalidate
-
-<?xml version="1.0"?>
-<yetti>
-  <test>Hello world</test>
-</yetti>
-```
-
 #### cURL request/response with JSON
-```json
+```
 curl -D - \ https://demo.secure.yetti.co.uk/1.0/Sample/Test.ws?format=json
 
 HTTP/1.1 200 OK
@@ -105,7 +82,9 @@ Connection: keep-alive
 Vary: Accept-Encoding
 Expires: Thu, 01 Jan 1970 00:00:00 +0000
 Cache-Control: no-cache, no-store, must-revalidate
+```
 
+```json
 {"test":"Hello world"}
 ```
 
@@ -115,7 +94,7 @@ To reduce load on the service, list operations will return a maximum of 30 resou
 
 ## API version
 
-The Yetti API uses a URI versioning scheme. The first element of the path contains the target version number (e.g. `https://demo.secure.yetti.co.uk/1.0/...`). 
+The Yetti API uses a URI versioning scheme. The first element of the path contains the target version number (e.g. `https://demo.secure.yetti.co.uk/2/...`). 
 If a version number is not provided, the latest version is assumed.
 
 New features and functionality that do not break API-compatibility will be introduced in the current version of the API and the URI will remain unchanged. 
