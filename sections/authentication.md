@@ -34,7 +34,7 @@ Please note that you must include all parameters in the request URI before signi
 To authenticate, you must provide a timestamp parameter and an X-Authorization header comprising your username and request signature.
 
 ```
-GET /1.0/Items.ws?timestamp=1330005721 HTTP/1.1
+GET /2/Items.ws?timestamp=1330005721 HTTP/1.1
 Host: demo.secure.yetti.co.uk
 X-Authorization: test:b2132f1dec3f2fd6f718f268be7df11001ad57ad143f3f21ba819e65de5d151d
 ```
