@@ -2,7 +2,7 @@
 
 > Items, items everywhere - but not a stitch to wear.
 
-## Test API
+## Available methods
 
 * `GET /items.ws` lists item types.
 * `GET /items/[type-id].ws` lists items of the given type.
@@ -13,6 +13,8 @@
 * `GET /items/collections/[item-id].ws` fetch a list of categories to which the given item is assigned.
 * `PUT /items/collections/[item-id].ws` assign the item to one or more categories.
 * `GET /templates/item/[type-id].ws` fetch a blank template for an item of the given type.
+
+## Details
 
 ### List item types
 ```
