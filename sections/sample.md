@@ -9,18 +9,22 @@
 
 These sample APIs are intended for testing. No authentication is required.
 
-### Hello world in JSON
-
+### Hello world
+```
+GET /sample/test.ws
+```
 ```json
 {
     "test": "Hello world"
 }
 ```
 
-### Hello Sam in XML
-
+### Hello Sam
+```
+GET /sample/hello/Sam.ws
+```
 ```json
 {
-    "hello": "Hello sam"
+    "hello": "Hello Sam"
 }
 ```

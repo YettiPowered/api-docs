@@ -13,7 +13,7 @@ You should also be familiar with:
 
 * ReSTful web services
 * HTTP/1.1
-* XML and/or JSON data serialization formats
+* The JSON data serialization format
 
 # Concepts
 
@@ -67,11 +67,11 @@ As of the most recent API version (2), Yetti supports the JSON serialization for
 
 ### cURL examples
 
-The following examples show how to use cURL to interface with the Yetti API.
+The following example shows how to use cURL to interface with the Yetti API.
 
-#### cURL request/response
+#### cURL request
 ```
-curl -D - \ https://demo.secure.yetti.co.uk/1.0/Sample/Test.ws?format=json
+curl -D - \ https://demo.secure.yetti.co.uk/2/Sample/Test.ws
 
 HTTP/1.1 200 OK
 Server: nginx
@@ -83,9 +83,12 @@ Vary: Accept-Encoding
 Expires: Thu, 01 Jan 1970 00:00:00 +0000
 Cache-Control: no-cache, no-store, must-revalidate
 ```
-JSON response:
+
+#### JSON response
 ```json
-{"test":"Hello world"}
+{
+    "test": "Hello world"
+}
 ```
 
 ## Paginated resources
