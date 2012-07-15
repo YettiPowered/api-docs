@@ -34,14 +34,14 @@ Please note that you must include all parameters in the request URI before signi
 To authenticate, you must provide a timestamp parameter and an X-Authorization header comprising your username and request signature.
 
 ```
-GET /1.0/Items.ws?timestamp=1330005721 HTTP/1.1
+GET /2/items.ws?timestamp=1330005721 HTTP/1.1
 Host: demo.secure.yetti.co.uk
 X-Authorization: test:b2132f1dec3f2fd6f718f268be7df11001ad57ad143f3f21ba819e65de5d151d
 ```
 
 ## Response
 
-The Yetti API may return any of the HTTP/1.1 response codes defined by RFC-2616 Section 10.
+The Yetti API may return any of the HTTP/1.1 response codes defined by [RFC-2616 Section 10](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
 
 ```json
 {
