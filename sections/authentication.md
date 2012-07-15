@@ -31,7 +31,7 @@ Please note that you must include all parameters in the request URI before signi
 
 ## Request
 
-To authenticate, you must provide a timestamp parameter and an X-Authorization header comprising your username and request signature.
+To authenticate, you must provide a timestamp parameter and an `X-Authorization` header comprising your username and request signature.
 
 ```
 GET /2/items.ws?timestamp=1330005721 HTTP/1.1
@@ -52,7 +52,7 @@ The Yetti API may return any of the HTTP/1.1 response codes defined by [RFC-2616
             "isAssetType": "0", 
             "isPurchasable": "0", 
             "name": "Blog", 
-            "nameSingular": "blog", 
+            "nameSingular": "post", 
             "urlPath": ""
         }
     ]
