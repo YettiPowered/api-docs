@@ -13,7 +13,6 @@ These sample APIs are intended for testing. No authentication is required.
 ```
 GET /sample/test.ws
 ```
-### Response
 ```json
 {
     "test": "Hello world"
@@ -24,8 +23,6 @@ GET /sample/test.ws
 ```
 GET /sample/hello/Sam.ws
 ```
-
-### Response
 ```json
 {
     "hello": "Hello Sam"

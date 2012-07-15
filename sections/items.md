@@ -1,6 +1,6 @@
 # Items API
 
-> Hello world!
+> Items, items everywhere - but not a stitch to wear.
 
 ## Test API
 
@@ -12,12 +12,12 @@
 * `DELETE /items/[type-id]/[item-id].ws` deletes the item with the given ID.
 * `GET /items/collections/[item-id].ws` fetch a list of categories to which the given item is assigned.
 * `PUT /items/collections/[item-id].ws` assign the item to one or more categories.
+* `GET /templates/item/[type-id].ws` fetch a blank template for an item of the given type.
 
 ### List item types
 ```
 GET /items.ws
 ```
-### Response
 ```json
 {
     "types": [
@@ -28,7 +28,7 @@ GET /items.ws
             "isPurchasable": "0", 
             "name": "Blog", 
             "nameSingular": "post", 
-            "urlPath": ""
+            "urlPath": "/blog/posts"
         },
         {
             "collectionTypeId": "2", 
