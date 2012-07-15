@@ -2,7 +2,7 @@
 
 > Hello world!
 
-## Test API
+## Available methods in the sample API
 
 * `GET /sample/test.ws` says hello world!
 * `GET /sample/hello/[name].ws` says hello to the specified name.
