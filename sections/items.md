@@ -13,6 +13,7 @@
 * `GET /items/collections/[item-id].ws` fetch a list of categories to which the given item is assigned.
 * `PUT /items/collections/[item-id].ws` assign the item to one or more categories.
 * `GET /templates/item/[type-id].ws` fetch a blank template for an item of the given type.
+* `GET /items/changes.ws?from=[date]&to=[date]` returns changes between the given times. If no "from" parameter is provided, assumes -1 day.
 
 ## Details
 
@@ -218,7 +219,7 @@ This will create a new item from the parameters passed:
             "Author": {
                 "dataType": "string", 
                 "id": 3, 
-                "value": "Sam  Holman"
+                "value": "Sam Holman"
             }, 
             "Body": {
                 "dataType": "longstring", 
