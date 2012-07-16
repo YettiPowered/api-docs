@@ -205,3 +205,87 @@ GET /items/1/69.ws
     }
 }
 ```
+
+### Create an item
+```
+POST /items/1.ws
+```
+This will create a new item from the parameters passed:
+```json
+{
+    "item": {
+        "properties": {
+            "Author": {
+                "dataType": "string", 
+                "id": 3, 
+                "value": "Sam  Holman"
+            }, 
+            "Body": {
+                "dataType": "longstring", 
+                "id": 5, 
+                "value": "So there you have it."
+            }, 
+            "Date": {
+                "dataType": "date", 
+                "id": 2, 
+                "value": "1234567890"
+            }, 
+            "Name": {
+                "dataType": "string", 
+                "id": 1, 
+                "value": "A new blog post"
+            }, 
+            "Summary": {
+                "dataType": "longstring", 
+                "id": 4, 
+                "value": "This is a new blog post"
+            }, 
+            "YouTube_video_ID": {
+                "dataType": "string", 
+                "id": 6, 
+                "value": ""
+            }
+        }, 
+        "resource": {
+            "author": "", 
+            "commentCount": "", 
+            "created": "1970-01-01T01:00:00+01:00", 
+            "fileExtension": "html", 
+            "identifier": "a-new-blog-post", 
+            "languageId": 1, 
+            "name": "A new blog post", 
+            "resourceId": 0, 
+            "resourceTypeId": 4, 
+            "resourceTypeName": "Blog", 
+            "urlPath": "blog/articles/.html"
+        }
+    }
+}
+```
+Response:
+```
+HTTP/1.1 201 Created
+Server: nginx
+Date: Mon, 16 Jul 2012 09:39:12 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Expires: Mon, 16 Jul 2012 10:39:12 +0100
+Cache-Control: no-cache, no-store, must-revalidate
+X-ResourceId: 186
+Location: /items/4/186.ws
+```
+Important headers to look for in the response are `201 Created` to indicate a successful creation, `X-ResourceId` which will provide the ID of the new item 
+and `Location` which will provide a path for fetching the new item from the API.
+
+In the event of an error, you'll receive an error code such as `400 Bad request` and an array of errors like the following:
+```json
+{
+    "errors": [
+        {
+            "key": "identifier", 
+            "message": "A resource with this name already exists, please choose another."
+        }
+    ]
+}
+```
