@@ -278,7 +278,7 @@ Location: /items/4/186.ws
 Important headers to look for in the response are `201 Created` to indicate a successful creation, `X-ResourceId` which will provide the ID of the new item 
 and `Location` which will provide a path for fetching the new item from the API.
 
-In the event of an error, you'll receive an error code such as `400 Bad request` and an array of errors like the following:
+In the event of an error, you'll receive a HTTP/1.1 error code such as `400 Bad request` and an array of messages:
 ```json
 {
     "errors": [
