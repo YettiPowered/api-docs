@@ -11,9 +11,9 @@ This guide is intended to assist software developers who want to write applicati
 To use the information provided here, you should first have a general understanding of the Yetti platform and have access to an active administration account with web service credentials. 
 You should also be familiar with:
 
-* ReSTful web services
+* ReSTful web services.
 * HTTP/1.1
-* The JSON data serialization format
+* The JSON data serialization format.
 
 # Concepts
 
@@ -106,8 +106,8 @@ being updated accordingly. When new API versions are released, older versions wi
 
 # Available APIs
 
-[Sample](https://github.com/YettiPowered/api-docs/blob/master/sections/sample.md)
-[Items](https://github.com/YettiPowered/api-docs/blob/master/sections/items.md)
+* [Sample](https://github.com/YettiPowered/api-docs/blob/master/sections/sample.md)
+* [Items](https://github.com/YettiPowered/api-docs/blob/master/sections/items.md)
 
 # Contributing
 
