@@ -13,7 +13,7 @@
 * `GET /items/collections/[item-id].ws` fetch a list of categories to which the given item is assigned.
 * `PUT /items/collections/[item-id].ws` assign the item to one or more categories.
 * `GET /templates/item/[type-id].ws` fetch a blank template for an item of the given type.
-* `GET /items/changes.ws?from=[date]&to=[date]` returns changes between the given times. If no "from" parameter is provided, assumes -1 day.
+* `GET /items/changes.ws?from=[date]&to=[date]` returns changes between the given times.
 
 ## Details
 
@@ -348,18 +348,12 @@ Will delete the item with the given ID and return `200 OK`.
 ```
 GET /items/collections/142.ws
 ```
-This will return a list of categories to which the given item is assigned.
+This will return a list of IDs for categories to which the given item is assigned.
 ```json
 {
     "collections": [
-        {
-            "identifier": "yetti", 
-            "resourceId": 42
-        }, 
-        {
-            "identifier": "development", 
-            "resourceId": 188
-        }
+        42, 
+        188
     ]
 }
 ```
@@ -371,12 +365,8 @@ PUT /items/collections/142.ws
 ```json
 {
     "collections": [
-        {
-            "resourceId": 42
-        },
-        {
-            "resourceId": 188
-        }
+        42, 
+        188
     ]
 }
 ```
@@ -475,7 +465,7 @@ This will return a JSON blob with empty values. You can then populate these valu
 ```
 GET /items/changes.ws?from=2012-07-01T11:30:00&to=2012-07-10
 ```
-The `from` and `to` parameters are optional, but if provided, should be dates in ISO 8601 format. If you don't provide these values, `from` defaults to `-1 day` and `to` to the current date/time.
+The `from` and `to` parameters are optional, but if provided, should be dates in ISO 8601 format. If you don't provide these values, `from` defaults to -1 day and `to` to the current date/time.
 ```json
 {
     "changes": {
