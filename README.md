@@ -108,6 +108,9 @@ being updated accordingly. When new API versions are released, older versions wi
 
 * [Sample](https://github.com/YettiPowered/api-docs/blob/master/sections/sample.md)
 * [Items](https://github.com/YettiPowered/api-docs/blob/master/sections/items.md)
+* [Categories](https://github.com/YettiPowered/api-docs/blob/master/sections/categories.md)
+* [Users](https://github.com/YettiPowered/api-docs/blob/master/sections/users.md)
+* [Groups](https://github.com/YettiPowered/api-docs/blob/master/sections/groups.md)
 
 # Contributing
 
