@@ -387,10 +387,10 @@ This will return a JSON blob with empty values. You can then populate these valu
                     "item": {
                         "author": "", 
                         "commentCount": "", 
-                        "created": "1970-01-01T01:00:00+01:00", 
+                        "created": "", 
                         "fileExtension": "", 
                         "fileSize": 0, 
-                        "iconUrl": "/labeled/images/icons/fileTypes/.png", 
+                        "iconUrl": "", 
                         "identifier": "", 
                         "isImage": 1, 
                         "languageId": 1, 
@@ -430,17 +430,12 @@ This will return a JSON blob with empty values. You can then populate these valu
                 "dataType": "longstring", 
                 "id": 4, 
                 "value": ""
-            }, 
-            "YouTube_video_ID": {
-                "dataType": "string", 
-                "id": 6, 
-                "value": ""
             }
         }, 
         "resource": {
             "author": "", 
             "commentCount": "", 
-            "created": "1970-01-01T01:00:00+01:00", 
+            "created": "", 
             "fileExtension": "html", 
             "identifier": "", 
             "languageId": 1, 
@@ -448,12 +443,12 @@ This will return a JSON blob with empty values. You can then populate these valu
             "resourceId": 0, 
             "resourceTypeId": 4, 
             "resourceTypeName": "Blog", 
-            "urlPath": "blog/articles/.html"
+            "urlPath": ""
         }, 
         "revision": {
             "author": "", 
             "comment": "", 
-            "created": "1970-01-01T01:00:00+01:00", 
+            "created": "", 
             "revisionId": 0
         }
     }
