@@ -290,3 +290,57 @@ In the event of an error, you'll receive a HTTP/1.1 error code such as `400 Bad 
     ]
 }
 ```
+
+#### Attaching files
+
+"Asset" items such as images and files must have a property of type `filename`. To "upload" a file, you must pass the intended filename into the value of this property,
+and then pass the file itself as a base64 encoded string, `fileData`, inside the `item` element of your JSON blob, for example:
+
+```json
+{
+    "item": {
+        "properties": {
+            "File": {
+                "dataType": "filename", 
+                "id": 1, 
+                "value": "some_file.png"
+            },
+            ...
+        }, 
+        "resource": {
+            "identifier": "some_file",
+            ...
+        },
+        "fileData": "R0lGODlhMAAwAPf/APO1RvSGprGxsVJQY/e7QvW2RqurqzU6lAaLmXdnSr2Bq+u2VqOio/1oIzM3jdSjU4aqdpSUlP69SY9zbKeYfCsrcouLizKclNLS0dmy=="
+    }
+}
+```
+
+### Update an item
+```
+PUT /items/4/186.ws
+```
+This will update the item with the given ID from the parameters passed.
+```json
+{
+    "item": {
+        "assets": {
+            ...
+        },
+        "properties": {
+            ...
+        }, 
+        "resource": {
+            ...
+        },
+    }
+}
+```
+
+You'll receive a `200 OK` if the update was a success, or one of the `400` range error codes on fail.
+
+### Delete an item
+```
+DELETE /items/4/186.ws
+```
+
