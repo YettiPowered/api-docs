@@ -250,7 +250,7 @@ This will create a new item from the parameters passed:
         "resource": {
             "author": "", 
             "commentCount": "", 
-            "created": "1970-01-01T01:00:00+01:00", 
+            "created": "", 
             "fileExtension": "html", 
             "identifier": "a-new-blog-post", 
             "languageId": 1, 
@@ -258,7 +258,7 @@ This will create a new item from the parameters passed:
             "resourceId": 0, 
             "resourceTypeId": 4, 
             "resourceTypeName": "Blog", 
-            "urlPath": "blog/articles/.html"
+            "urlPath": ""
         }
     }
 }
