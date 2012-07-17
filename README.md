@@ -107,6 +107,7 @@ being updated accordingly. When new API versions are released, older versions wi
 # Available APIs
 
 [Sample](https://github.com/YettiPowered/api-docs/blob/master/sections/sample.md)
+[Items](https://github.com/YettiPowered/api-docs/blob/master/sections/items.md)
 
 # Contributing
 

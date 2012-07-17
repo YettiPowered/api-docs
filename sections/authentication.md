@@ -47,10 +47,10 @@ The Yetti API may return any of the HTTP/1.1 response codes defined by [RFC-2616
 {
     "types": [
         {
-            "collectionTypeId": "1", 
-            "id": "1", 
-            "isAssetType": "0", 
-            "isPurchasable": "0", 
+            "collectionTypeId": 1,
+            "id": 1,
+            "isAssetType": "",
+            "isPurchasable": "",
             "name": "Blog", 
             "nameSingular": "post", 
             "urlPath": ""
