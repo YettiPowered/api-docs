@@ -336,11 +336,183 @@ This will update the item with the given ID from the parameters passed.
     }
 }
 ```
-
 You'll receive a `200 OK` if the update was a success, or one of the `400` range error codes on fail.
 
 ### Delete an item
 ```
 DELETE /items/4/186.ws
 ```
+Will delete the item with the given ID and return `200 OK`.
 
+### Fetch a list of categories for an item
+```
+GET /items/collections/142.ws
+```
+This will return a list of categories to which the given item is assigned.
+```json
+{
+    "collections": [
+        {
+            "identifier": "yetti", 
+            "resourceId": 42
+        }, 
+        {
+            "identifier": "development", 
+            "resourceId": 188
+        }
+    ]
+}
+```
+
+### Assign an item to one or more categories
+```
+PUT /items/collections/142.ws
+```
+```json
+{
+    "collections": [
+        {
+            "resourceId": 42
+        },
+        {
+            "resourceId": 188
+        }
+    ]
+}
+```
+You'll receive a `200 OK` if the update was a success.
+
+### Fetch an item template
+```
+GET /templates/item/4.ws
+```
+This will return a JSON blob with empty values. You can then populate these values and POST the data back to `/items.ws` to create a new item of the requested type.
+```json
+{
+    "item": {
+        "assets": {
+            "Image": [
+                {
+                    "altText": "", 
+                    "item": {
+                        "author": "", 
+                        "commentCount": "", 
+                        "created": "1970-01-01T01:00:00+01:00", 
+                        "fileExtension": "", 
+                        "fileSize": 0, 
+                        "iconUrl": "/labeled/images/icons/fileTypes/.png", 
+                        "identifier": "", 
+                        "isImage": 1, 
+                        "languageId": 1, 
+                        "name": "", 
+                        "resourceId": 0, 
+                        "resourceTypeId": 1, 
+                        "resourceTypeName": "Images", 
+                        "urlPath": ""
+                    }, 
+                    "properties": [], 
+                    "url": ""
+                }
+            ]
+        }, 
+        "properties": {
+            "Author": {
+                "dataType": "string", 
+                "id": 3, 
+                "value": ""
+            }, 
+            "Body": {
+                "dataType": "longstring", 
+                "id": 5, 
+                "value": ""
+            }, 
+            "Date": {
+                "dataType": "date", 
+                "id": 2, 
+                "value": ""
+            }, 
+            "Name": {
+                "dataType": "string", 
+                "id": 1, 
+                "value": ""
+            }, 
+            "Summary": {
+                "dataType": "longstring", 
+                "id": 4, 
+                "value": ""
+            }, 
+            "YouTube_video_ID": {
+                "dataType": "string", 
+                "id": 6, 
+                "value": ""
+            }
+        }, 
+        "resource": {
+            "author": "", 
+            "commentCount": "", 
+            "created": "1970-01-01T01:00:00+01:00", 
+            "fileExtension": "html", 
+            "identifier": "", 
+            "languageId": 1, 
+            "name": "", 
+            "resourceId": 0, 
+            "resourceTypeId": 4, 
+            "resourceTypeName": "Blog", 
+            "urlPath": "blog/articles/.html"
+        }, 
+        "revision": {
+            "author": "", 
+            "comment": "", 
+            "created": "1970-01-01T01:00:00+01:00", 
+            "revisionId": 0
+        }
+    }
+}
+```
+
+### Fetch a list of item changes for a particular date range
+
+```
+GET /items/changes.ws?from=2012-07-01T11:30:00&to=2012-07-10
+```
+The `from` and `to` parameters are optional, but if provided, should be dates in ISO 8601 format. If you don't provide these values, `from` defaults to `-1 day` and `to` to the current date/time.
+```json
+{
+    "changes": {
+        "items": [
+            {
+                "date": "2012-07-02T11:43:04+01:00", 
+                "resourceId": 162, 
+                "type": "created"
+            }, 
+            {
+                "date": "2012-07-02T11:37:00+01:00", 
+                "resourceId": 157, 
+                "type": "created"
+            }, 
+            {
+                "date": "2012-07-02T11:31:33+01:00", 
+                "resourceId": 155, 
+                "type": "updated"
+            }, 
+            {
+                "date": "2012-07-02T11:30:59+01:00", 
+                "resourceId": 155, 
+                "type": "updated"
+            }, 
+            {
+                "date": "2012-07-02T11:28:33+01:00", 
+                "resourceId": 155, 
+                "type": "updated"
+            }, 
+            {
+                "date": "2012-07-02T11:27:51+01:00", 
+                "resourceId": 155, 
+                "type": "created"
+            }
+        ], 
+        "since": "2012-07-01T11:30:00+01:00", 
+        "until": "2012-07-10T00:00:00+01:00"
+    }
+}
+```
