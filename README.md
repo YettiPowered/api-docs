@@ -104,6 +104,11 @@ New features and functionality that do not break API-compatibility will be intro
 Any feature or functionality changes that would necessitate a break in API-compatibility will require a new version, which will result in the URI version 
 being updated accordingly. When new API versions are released, older versions will be marked as `DEPRECATED`.
 
+## Languaging
+
+The APIs for multi-language sites work using the same URL scheme as the front-end, by prefixing the URI with the locale code. In the case of webservices, 
+this goes *after* the API version number, e.g. `https://demo.secure.yetti.co.uk/2/fr/...`.
+
 # Available APIs
 
 * [Sample](https://github.com/YettiPowered/api-docs/blob/master/sections/sample.md)
