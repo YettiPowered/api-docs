@@ -14,6 +14,15 @@
 * `PUT /items/collections/[item-id].ws` assign the item to one or more categories.
 * `GET /templates/item/[type-id].ws` fetch a blank template for an item of the given type.
 * `GET /items/changes.ws?from=[date]&to=[date]` returns changes between the given times.
+* `GET /items/filters/[type-id].ws` lists filter types for the given type.
+* `POST /items/filters/[type-id].ws` creates a filter type for the given item type.
+* `GET /items/filters/[type-id]/[filter-type-id].ws` lists filters of the given type.
+* `POST /items/filters/[type-id]/[filter-type-id].ws` creates a filter within the given filter type.
+* `PUT /items/filters/[type-id]/[filter-type-id].ws` updates the filter type with the given ID.
+* `DELETE /items/filters/[type-id]/[filter-type-id].ws` deletes the filter type with the given ID.
+* `GET /items/filters/[type-id]/[filter-type-id]/[filter-id].ws` lists items that are assigned to the given filter.
+* `PUT /items/filters/[type-id]/[filter-type-id]/[filter-id].ws` updates the list of assigned items for the given filter.
+* `DELETE /items/filters/[type-id]/[filter-type-id]/[filter-id].ws` deletes the filter with the given ID.
 
 ## Details
 
