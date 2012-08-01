@@ -1,4 +1,4 @@
-# Items API
+# Item filters API
 
 > Filters.
 

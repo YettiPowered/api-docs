@@ -61,7 +61,7 @@ Resources can be accessed using a unique identifier (URI) and manipulated by mak
 
 Web service requests are always identified by the URI suffix "`.ws`".
 
-## Request / Reponse types
+## Request / Response types
 
 As of the most recent API version (2), Yetti supports the JSON serialization format only.
 
