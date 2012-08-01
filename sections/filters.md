@@ -11,7 +11,7 @@
 * `PUT /items/filters/[type-id]/[filter-type-id].ws` updates the filter type with the given ID.
 * `DELETE /items/filters/[type-id]/[filter-type-id].ws` deletes the filter type with the given ID.
 * `GET /items/filters/[type-id]/[filter-type-id]/[filter-id].ws` lists items that are assigned to the given filter.
-* `PUT /items/filters/[type-id]/[filter-type-id]/[filter-id].ws` updates the list of assigned items for the given filter.
+* `PUT /items/filters/[type-id]/[filter-type-id]/[filter-id].ws` updates the filter with the given ID.
 * `DELETE /items/filters/[type-id]/[filter-type-id]/[filter-id].ws` deletes the filter with the given ID.
 
 Filters can also be configured within categories. To do this, use any of the above URIs but replace `/items/filters/[type-id]` with `/collections/filters/[collection-id]`.
@@ -95,8 +95,17 @@ PUT /items/filters/5/3.ws
 ```
 This will update the particular filter type based on the parameters passed:
 ```json
-
+{
+    "name": "Smallish"
+}
 ```
+You'll receive a `200 OK` if the update was successful, or an error code and an array of errors in JSON if it fails.
+
+### Delete a filter type
+```
+DELETE /items/filters/5/3.ws
+```
+Will delete the filter type with the given ID and return `200 OK`.
 
 ### List items that are assigned to a particular filter
 ```
@@ -118,3 +127,28 @@ GET /items/filters/5/1/2.ws
 }
 ```
 
+# Update a filter
+```
+PUT /items/filters/5/3/7.ws
+```
+This will update the filter (in this case filter ID 7) based on the data passed:
+```json
+{
+    "conditionalFilters": [
+        1,
+        2
+    ],
+    "items": [
+        9,
+        11
+    ],
+    "name": "Small"
+}
+```
+You'll receive a `200 OK` if the update was successful, or an error code and an array of errors in JSON if it fails.
+
+### Delete a filter
+```
+DELETE /items/filters/5/3/7.ws
+```
+Will delete the filter with the given ID and return `200 OK`.
