@@ -113,7 +113,8 @@ this goes *after* the API version number, e.g. `https://demo.secure.yetti.co.uk/
 
 * [Sample](https://github.com/YettiPowered/api-docs/blob/master/sections/sample.md)
 * [Items](https://github.com/YettiPowered/api-docs/blob/master/sections/items.md)
-* [Categories](https://github.com/YettiPowered/api-docs/blob/master/sections/categories.md)
+** [Categories](https://github.com/YettiPowered/api-docs/blob/master/sections/categories.md)
+** [Filters](https://github.com/YettiPowered/api-docs/blob/master/sections/filters.md)
 * [Users](https://github.com/YettiPowered/api-docs/blob/master/sections/users.md)
 * [Groups](https://github.com/YettiPowered/api-docs/blob/master/sections/groups.md)
 
