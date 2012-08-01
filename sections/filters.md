@@ -105,7 +105,7 @@ You'll receive a `200 OK` if the update was successful, or an error code and an 
 ```
 DELETE /items/filters/5/3.ws
 ```
-Will delete the filter type with the given ID and return `200 OK`.
+Will delete the filter type with the given ID and return `200 OK` on success.
 
 ### List items that are assigned to a particular filter
 ```
@@ -116,12 +116,8 @@ GET /items/filters/5/1/2.ws
     "conditionalFilters": [],
     "id": 2,
     "items": [
-        {
-            "id": 9
-        },
-        {
-            "id": 11
-        }
+        9,
+        11
     ],
     "name": "Green"
 }
@@ -151,4 +147,4 @@ You'll receive a `200 OK` if the update was successful, or an error code and an 
 ```
 DELETE /items/filters/5/3/7.ws
 ```
-Will delete the filter with the given ID and return `200 OK`.
+Will delete the filter with the given ID and return `200 OK` on success.
