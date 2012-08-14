@@ -117,6 +117,7 @@ this goes *after* the API version number, e.g. `https://demo.secure.yetti.co.uk/
 * [Filters](https://github.com/YettiPowered/api-docs/blob/master/sections/filters.md)
 * [Users](https://github.com/YettiPowered/api-docs/blob/master/sections/users.md)
 * [Groups](https://github.com/YettiPowered/api-docs/blob/master/sections/groups.md)
+* [Languages](https://github.com/YettiPowered/api-docs/blob/master/sections/languages.md)
 
 # Contributing
 
