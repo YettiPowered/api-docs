@@ -114,6 +114,7 @@ GET /items/filters/5/1/2.ws
 ```json
 {
     "conditionalFilters": [],
+    "filterTypeId": 1,
     "id": 2,
     "items": [
         9,
