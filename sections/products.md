@@ -2,6 +2,11 @@
 
 > Purchasable items
 
+## Note
+
+Products are essentially the same thing as any other type of item, and as such, the API endpoints for creating, retrieving and updating products are the same as for managing regular items.
+The only difference is in the additional data that can be sent and received regarding stock, VAT, pricing, variations and user prompts.
+
 ## Available methods
 
 * `GET /items/combinations/[item-id].ws` lists combinations for the given product item.
