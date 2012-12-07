@@ -7,9 +7,9 @@ You must keep your Client Secret safe and secure or the integrity of your applic
 
 ## The web application flow
 
-Step 1. Redirect users to authorise access to their Yetti site
+**Step 1. Redirect users to authorise access to their Yetti site**
 
-`GET https://yoursite.secure.yetti.co.uk/oauth/authorize.admin?client_id=id&redirect_uri=http://your_app&scope=scopes&state=abc123`
+`GET https://yoursite.secure.yetti.co.uk/oauth/authorize.admin?client_id=id&redirect_uri=uri&scope=scopes&state=...`
 
 Parameters:
 
@@ -18,7 +18,7 @@ Parameters:
 * **scope** - Comma separated list of [scopes](#scopes) (used to request permission to specific types of resource).
 * **state** - An unguessable random string. Used to protect against cross-site request forgery attacks. You should generate this string and store it in a local client-side session variable.
 
-Step 2. User logs in to their Yetti site and authorises your app.
+**Step 2. User logs in to their Yetti site and authorises your app.**
 
 On directing the user to their Yetti site with the URL above, a number of things may happen:
 
@@ -28,7 +28,7 @@ On directing the user to their Yetti site with the URL above, a number of things
 3. If the user wasn't logged in to their Yetti site, they will be presented with a standard admin login form. Once logged in, they may or may not see the approval screen as above depending on whether
    or not your app has already been approved. Either way, once approved, they will also be redirected back to your app with a `code` parameter in the query string.
 
-Step 3. Exchange the code for an access token.
+**Step 3. Exchange the code for an access token.**
 
 Once the user has arrived back at your application, you need to do a couple of things:
 
@@ -57,7 +57,7 @@ If the details match, an access token will be returned:
 }
 ```
 
-Step 4. Test the access token by performing an API request
+**Step 4. Test the access token by performing an API request**
 
 You should persist the access token you received from Yetti in your database or in a session variable in order to make further requests to the Yetti API,
 acting on behalf of the user by providing it in an `X-Access-Token` header:
@@ -68,7 +68,7 @@ This token is good for the life of the application, or until the user revokes it
 to the Yetti API via server-side HTTPS requests.
 
 In order to check whether or not a user is "logged in" to your application, you can perform any API request which requires authorisation and passing the access token as shown above.
-A common first request is to fetch some basic information about the current authorised user via the [Auth details API](auth.ws) at `/auth/details.ws`.
+A common first request is to fetch some basic information about the current authorised user via the [Auth details API](auth.md) at `/auth/details.ws`.
 
 ## Scopes
 
