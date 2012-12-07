@@ -111,13 +111,13 @@ this goes *after* the API version number, e.g. `https://demo.secure.yetti.co.uk/
 
 # Available APIs
 
-* [Sample](api-docs/sections/sample.md)
-* [Items](api-docs/sections/items.md)
-* [Categories](api-docs/sections/categories.md)
-* [Filters](api-docs/sections/filters.md)
-* [Users](api-docs/sections/users.md)
-* [Groups](api-docs/sections/groups.md)
-* [Languages](api-docs/sections/languages.md)
+* [Sample](api-docs/tree/master/sections/sample.md)
+* [Items](api-docs/tree/master/sections/items.md)
+* [Categories](api-docs/tree/master/sections/categories.md)
+* [Filters](api-docs/tree/master/sections/filters.md)
+* [Users](api-docs/tree/master/sections/users.md)
+* [Groups](api-docs/tree/master/sections/groups.md)
+* [Languages](api-docs/tree/master/sections/languages.md)
 
 # Contributing
 
