@@ -3,7 +3,7 @@
 OAuth 2 provides a method for you, as an application developer, to request access to the data on a user's Yetti site without getting their password or fiddling about with API keys.
 
 Developers first need to [register their application](http://yetti.co.uk) in order to receive a unique Client ID and Client Secret.
-You must keep your Client Secret safe and secure or the integrity of your application and of your users data may be compromised.
+You must keep your Client Secret **safe and secure** - or the integrity of your application, and of your user's data, will be potentially compromised.
 
 ## The web application flow
 
@@ -53,14 +53,14 @@ If the details match, an access token will be returned:
 
 ```json
 {
-    "access_token":"fbdad..."
+    "access_token":"fbdadf3a578d01fea87a0b253506b1dac786a2cf6cde36ee83670ad6fc188289"
 }
 ```
 
 **Step 4. Test the access token by performing an API request**
 
 You should persist the access token you received from Yetti in your database or in a session variable in order to make further requests to the Yetti API,
-acting on behalf of the user by providing it in an `X-Access-Token` header:
+acting on behalf of the user, by providing it in an `X-Access-Token` header:
 
 `X-Access-Token: fbdadf3a578d01fea87a0b253506b1dac786a2cf6cde36ee83670ad6fc188289`
 
