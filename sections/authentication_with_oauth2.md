@@ -7,9 +7,9 @@ You must keep your Client Secret safe and secure or the integrity of your applic
 
 ## The web application flow
 
-1. Redirect users to authorise access to their Yetti site
+Step 1. Redirect users to authorise access to their Yetti site
 
-`GET https://yoursite.secure.yetti.co.uk/oauth/authorize.admin`
+`GET https://yoursite.secure.yetti.co.uk/oauth/authorize.admin?client_id=id&redirect_uri=http://your_app&scope=scopes&state=abc123`
 
 Parameters:
 
@@ -18,7 +18,7 @@ Parameters:
 * **scope** - Comma separated list of [scopes](#scopes) (used to request permission to specific types of resource).
 * **state** - An unguessable random string. Used to protect against cross-site request forgery attacks. You should generate this string and store it in a local client-side session variable.
 
-2. User logs in to their Yetti site and authorises your app.
+Step 2. User logs in to their Yetti site and authorises your app.
 
 On directing the user to their Yetti site with the URL above, a number of things may happen:
 
@@ -28,7 +28,7 @@ On directing the user to their Yetti site with the URL above, a number of things
 3. If the user wasn't logged in to their Yetti site, they will be presented with a standard admin login form. Once logged in, they may or may not see the approval screen as above depending on whether
    or not your app has already been approved. Either way, once approved, they will also be redirected back to your app with a `code` parameter in the query string.
 
-3. Exchange the code for an access token.
+Step 3. Exchange the code for an access token.
 
 Once the user has arrived back at your application, you need to do a couple of things:
 
@@ -57,7 +57,9 @@ If the details match, an access token will be returned:
 }
 ```
 
-You should persist this access token in your database or in a session variable in order to make further requests to the Yetti API,
+Step 4. Test the access token by performing an API request
+
+You should persist the access token you received from Yetti in your database or in a session variable in order to make further requests to the Yetti API,
 acting on behalf of the user by providing it in an `X-Access-Token` header:
 
 `X-Access-Token: fbdadf3a578d01fea87a0b253506b1dac786a2cf6cde36ee83670ad6fc188289`
