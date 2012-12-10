@@ -53,22 +53,37 @@ If the details match, an access token will be returned:
 
 ```json
 {
-    "access_token":"fbdadf3a578d01fea87a0b253506b1dac786a2cf6cde36ee83670ad6fc188289"
+   "access_token":"fbdadf3a578d01fea87a0b253506b1dac786a2cf6cde36ee83670ad6fc188289",
+   "token_expires":7200,
+   "token_type":"bearer"
 }
 ```
 
 **Step 4. Test the access token by performing an API request**
 
 You should persist the access token you received from Yetti in your database or in a session variable in order to make further requests to the Yetti API,
-acting on behalf of the user, by providing it in an `X-Access-Token` header:
+acting on behalf of the user, by providing it in an `Authorization` header:
 
-`X-Access-Token: fbdadf3a578d01fea87a0b253506b1dac786a2cf6cde36ee83670ad6fc188289`
-
-This token is good for the life of the application, or until the user revokes it in their admin area so you must **keep it safe**. It doesn't need, and therefor shouldn't, be transmitted anywhere other than
-to the Yetti API via server-side HTTPS requests.
+`Authorization: bearer fbdadf3a578d01fea87a0b253506b1dac786a2cf6cde36ee83670ad6fc188289`
 
 In order to check whether or not a user is "logged in" to your application, you can perform any API request which requires authorisation and passing the access token as shown above.
 A common first request is to fetch some basic information about the current authorised user via the [Auth details API](auth.md) at `/auth/details.ws`.
+
+### Token invalidation
+
+The access token can become invalid for a number of reasons:
+
+1. Expiry. The token_expires flag indicates how long (in seconds) the token will be valid for. It's normally valid for two hours from the time of issue.
+2. The user logs out of Yetti.
+3. The user changes their password.
+4. The user revokes access to your application in their admin area.
+
+If you find that the access token becomes invalid (the API denies permission) then you can redirect the user back to the original authorization endpoint. If they're still logged in to Yetti
+and they haven't revoked access to your app then they'll be returned straight back without any user interaction and with a code parameter which can be used to request a new access token in
+the same way as before.
+
+Whilst valid, the access token provides access to the user's site with all of the permissions you've requested, so it's important that you **keep it safe**.
+It doesn't need, and therefor shouldn't, be transmitted anywhere other than to the Yetti API via server-side HTTPS requests.
 
 ## Scopes
 
