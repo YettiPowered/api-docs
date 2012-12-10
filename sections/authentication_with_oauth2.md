@@ -78,9 +78,9 @@ The access token can become invalid for a number of reasons:
 3. The user changes their password.
 4. The user revokes access to your application in their admin area.
 
-If you find that the access token becomes invalid (the API denies permission), you can redirect the user back to the original authorization endpoint. If they're still logged in to Yetti
-and they haven't revoked access to your app then they'll be returned straight back to your app without any user interaction and with a code parameter, etc. Using this you'd be able to
-request a new access token in the same way as before.
+If you find that the access token becomes invalid (the API denies permission) then you can redirect the user back to the original authorization endpoint. If they're still logged in to Yetti
+and they haven't revoked access to your app then they'll be returned straight back without any user interaction and with a code parameter which can be used to request a new access token in
+the same way as before.
 
 Whilst valid, the access token provides access to the user's site with all of the permissions you've requested, so it's important that you **keep it safe**.
 It doesn't need, and therefor shouldn't, be transmitted anywhere other than to the Yetti API via server-side HTTPS requests.
