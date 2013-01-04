@@ -1,11 +1,13 @@
 # Categories API
 
-> We could live without categories. But then we'd have anarchy!
+> Categories are actually called "collections"...
 
 ## Available methods
 
 * `GET /collections.ws` lists collection types.
 * `GET /collections/[type-id].ws` lists collections of the given type.
+* `GET /collections/items/[collection-id].ws` fetch the list of items within the given collection.
+* `PUT /collections/items/[collection-id].ws` update the list of items within the given collection.
 
 ## Details
 
@@ -134,3 +136,31 @@ GET /collections/2.ws
    }
 }
 ```
+
+### List items within a collection
+```
+GET /collections/items/20.ws
+```
+This will return a list of IDs for items within the collection.
+```json
+{
+   "items":[
+      85,
+      1793
+   ]
+}
+```
+
+### Update the list of items within a collection
+```
+PUT /collections/items/20.ws
+```
+```json
+{
+   "items":[
+      85,
+      1793
+   ]
+}
+```
+You'll receive a `200 OK` if the update was a success.
