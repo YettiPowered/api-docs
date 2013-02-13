@@ -25,7 +25,7 @@ Authentication is the process of proving your identity to the system.
 Identity is an important factor when performing web service requests, as it is your identify which governs what access you have and what operations you are allowed to perform.
 
 Some basic Yetti API operations don't require authentication, however any method which alters data, and most which return data specific to your system do require particular privileges. 
-The authentication and signing process is explained in more detail in the [authentication guide](api-docs/tree/master/sections/authentication.md).
+The authentication and signing process is explained in more detail in the [authentication guide](api-docs/blob/master/sections/authentication.md).
 
 ## Resources
 
@@ -111,14 +111,14 @@ this goes *after* the API version number, e.g. `https://demo.secure.yetti.co.uk/
 
 # Available APIs
 
-* [Sample](api-docs/tree/master/sections/sample.md)
-* [Auth](api-docs/tree/master/sections/auth.md)
-* [Items](api-docs/tree/master/sections/items.md)
-* [Categories](api-docs/tree/master/sections/categories.md)
-* [Filters](api-docs/tree/master/sections/filters.md)
-* [Users](api-docs/tree/master/sections/users.md)
-* [Groups](api-docs/tree/master/sections/groups.md)
-* [Languages](api-docs/tree/master/sections/languages.md)
+* [Sample](api-docs/blob/master/sections/sample.md)
+* [Auth](api-docs/blob/master/sections/auth.md)
+* [Items](api-docs/blob/master/sections/items.md)
+* [Categories](api-docs/blob/master/sections/categories.md)
+* [Filters](api-docs/blob/master/sections/filters.md)
+* [Users](api-docs/blob/master/sections/users.md)
+* [Groups](api-docs/blob/master/sections/groups.md)
+* [Languages](api-docs/blob/master/sections/languages.md)
 
 # Contributing
 
