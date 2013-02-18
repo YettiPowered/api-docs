@@ -119,6 +119,7 @@ this goes *after* the API version number, e.g. `https://demo.secure.yetti.co.uk/
 * [Users](sections/users.md)
 * [Groups](sections/groups.md)
 * [Languages](sections/languages.md)
+* [Orders](sections/orders.md)
 
 # Contributing
 
