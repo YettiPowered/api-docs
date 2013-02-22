@@ -8,6 +8,7 @@
 * `POST /orders.ws` create a new order.
 * `GET /orders/[order-id].ws` fetches the order with the given ID.
 * `PATCH /orders/[order-id].ws` update the given order.
+* `GET /templates/order.ws` fetch a blank template for use when creating a new order.
 * `GET /orders/statuses.ws` lists all available order statuses for the site.
 
 ## Details
