@@ -5,6 +5,7 @@
 ## Available methods
 
 * `GET /orders.ws` list orders.
+* `POST /orders.ws` create a new order.
 * `GET /orders/[order-id].ws` fetches the order with the given ID.
 * `PATCH /orders/[order-id].ws` update the given order.
 * `GET /orders/statuses.ws` lists all available order statuses for the site.
@@ -21,7 +22,7 @@ GET /orders.ws?status=[status-id]
 ```
 ```json
 {
-   "orders":{
+   "listing":{
       "totalItems":1,
       "start":0,
       "limit":30,
