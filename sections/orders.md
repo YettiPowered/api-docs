@@ -8,6 +8,12 @@
 * `POST /orders.ws` create a new order.
 * `GET /orders/[order-id].ws` fetches the order with the given ID.
 * `PATCH /orders/[order-id].ws` update the given order.
+* `GET /orders/[order-id]/notes.ws` lists all notes for the given order.
+* `POST /orders/[order-id]/notes.ws` create a new note.
+* `GET /orders/[order-id]/notes/[note-id].ws` fetch an individual order note.
+* `GET /orders/[order-id]/shipments.ws` lists all shipments for the given order.
+* `POST /orders/[order-id]/shipments.ws` create a new shipment.
+* `GET /orders/[order-id]/shipments/[shipment-id].ws` fetch an individual shipment.
 * `GET /templates/order.ws` fetch a blank template for use when creating a new order.
 * `GET /orders/statuses.ws` lists all available order statuses for the site.
 
