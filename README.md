@@ -57,7 +57,7 @@ Groups can be used to organise users into sets. This can be useful when applying
 # General API information
 
 The Yetti API is implemented using a ReSTful web service interface. 
-Resources can be accessed using a unique identifier (URI) and manipulated by making requests using one of the available HTTP verbs (GET, POST, PUT, DELETE).
+Resources can be accessed using a unique identifier (URI) and manipulated by making requests using one of the available HTTP verbs (GET, POST, PUT, PATCH, DELETE).
 
 Web service requests are always identified by the URI suffix "`.ws`".
 
@@ -119,6 +119,7 @@ this goes *after* the API version number, e.g. `https://demo.secure.yetti.co.uk/
 * [Users](sections/users.md)
 * [Groups](sections/groups.md)
 * [Languages](sections/languages.md)
+* [Orders](sections/orders.md)
 
 # Contributing
 
