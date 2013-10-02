@@ -63,7 +63,7 @@ Web service requests are always identified by the URI suffix "`.ws`".
 
 ## Request / Response types
 
-As of the most recent API version (2), Yetti supports the JSON serialization format only.
+As of API version 2, Yetti supports the JSON serialization format only. Use v1 for legacy XML support, but this does lack substantial newer features.
 
 ### cURL examples
 
@@ -71,7 +71,7 @@ The following example shows how to use cURL to interface with the Yetti API.
 
 #### cURL request
 ```
-curl -D - \ https://demo.secure.yetti.co.uk/2/Sample/Test.ws
+curl -D - \ https://demo.secure.yetti.co.uk/2.1/Sample/Test.ws
 
 HTTP/1.1 200 OK
 Server: nginx
@@ -97,7 +97,7 @@ To reduce load on the service, list operations will return a maximum of 30 resou
 
 ## API version
 
-The Yetti API uses a URI versioning scheme. The first element of the path contains the target version number (e.g. `https://demo.secure.yetti.co.uk/2/...`). 
+The Yetti API uses a URI versioning scheme. The first element of the path contains the target version number (e.g. `https://demo.secure.yetti.co.uk/2.1/...`). 
 If a version number is not provided, the latest version is assumed.
 
 New features and functionality that do not break API-compatibility will be introduced in the current version of the API and the URI will remain unchanged. 
