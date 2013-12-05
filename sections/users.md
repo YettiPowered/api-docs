@@ -23,3 +23,5 @@
 * `DELETE /users/[type-id]/[user-id]/addresses/[address-id].ws` deletes the address with the given ID.
 
 ## Details
+
+User operations are almost identical to operations on item resources. We'll document particular differences here, but for the most part please refer to [items](items.md).
