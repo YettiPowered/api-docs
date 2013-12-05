@@ -63,7 +63,7 @@ Web service requests are always identified by the URI suffix "`.ws`".
 
 ## Request / Response types
 
-As of API version 2, Yetti supports the JSON serialization format only. Use v1 for legacy XML support, but this does lack substantial newer features.
+As of API version 2, Yetti supports the JSON serialization format only. Use v1 for legacy XML support, but this does lack a substantial number of newer features.
 
 ### cURL examples
 
