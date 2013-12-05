@@ -1,26 +1,26 @@
 # Item filters API
 
-> Filters.
+> These allow you to filter out random cruft from a larger data set.
 
 ## Available methods
 
-* `GET /items/filters/[type-id].ws` lists filter types for the given type.
-* `POST /items/filters/[type-id].ws` creates a filter type for the given item type.
-* `GET /items/filters/[type-id]/[filter-type-id].ws` lists filters of the given type.
-* `POST /items/filters/[type-id]/[filter-type-id].ws` creates a filter within the given filter type.
-* `PUT /items/filters/[type-id]/[filter-type-id].ws` updates the filter type with the given ID.
-* `DELETE /items/filters/[type-id]/[filter-type-id].ws` deletes the filter type with the given ID.
-* `GET /items/filters/[type-id]/[filter-type-id]/[filter-id].ws` lists items that are assigned to the given filter.
-* `PUT /items/filters/[type-id]/[filter-type-id]/[filter-id].ws` updates the filter with the given ID.
-* `DELETE /items/filters/[type-id]/[filter-type-id]/[filter-id].ws` deletes the filter with the given ID.
+* `GET /filters/[type-id].ws` lists filter types for the given type.
+* `POST /filters/[type-id].ws` creates a filter type for the given item type.
+* `GET /filters/[type-id]/[filter-type-id].ws` lists filters of the given type.
+* `POST /filters/[type-id]/[filter-type-id].ws` creates a filter within the given filter type.
+* `PUT /filters/[type-id]/[filter-type-id].ws` updates the filter type with the given ID.
+* `DELETE /filters/[type-id]/[filter-type-id].ws` deletes the filter type with the given ID.
+* `GET /filters/[type-id]/[filter-type-id]/[filter-id].ws` lists items that are assigned to the given filter.
+* `PUT /filters/[type-id]/[filter-type-id]/[filter-id].ws` updates the filter with the given ID.
+* `DELETE /filters/[type-id]/[filter-type-id]/[filter-id].ws` deletes the filter with the given ID.
 
-Filters can also be configured within categories. To do this, use any of the above URIs but replace `/items/filters/[type-id]` with `/collections/filters/[collection-id]`.
+Filters can also be configured within categories. To do this, use any of the above URIs but replace `/filters/[type-id]` with `/collections/filters/[collection-id]`.
 
 ## Details
 
 ### List filter types
 ```
-GET /items/filters/5.ws
+GET /filters/5.ws
 ```
 ```json
 {
@@ -39,7 +39,7 @@ GET /items/filters/5.ws
 
 ### Create a filter type
 ```
-POST /items/filters/5.ws
+POST /filters/5.ws
 ```
 This will create a new filter type from the parameters passed:
 ```json
@@ -51,7 +51,7 @@ You'll receive a `201 Created` header, along with an `X-ResourceId` and `Locatio
 
 ### List filters for a particular filter type
 ```
-GET /items/filters/5/1.ws
+GET /filters/5/1.ws
 ```
 ```json
 {
@@ -79,7 +79,7 @@ GET /items/filters/5/1.ws
 
 ### Create a filter within a particular filter type
 ```
-POST /items/filters/5/3.ws
+POST /filters/5/3.ws
 ```
 This will create a new filter from the parameters passed:
 ```json
@@ -91,7 +91,7 @@ You'll receive a `201 Created` header, along with an `X-ResourceId` and `Locatio
 
 ### Update a filter type
 ```
-PUT /items/filters/5/3.ws
+PUT /filters/5/3.ws
 ```
 This will update the particular filter type based on the parameters passed:
 ```json
@@ -103,13 +103,13 @@ You'll receive a `200 OK` if the update was successful, or an error code and an 
 
 ### Delete a filter type
 ```
-DELETE /items/filters/5/3.ws
+DELETE /filters/5/3.ws
 ```
 Will delete the filter type with the given ID and return `200 OK` on success.
 
 ### List items that are assigned to a particular filter
 ```
-GET /items/filters/5/1/2.ws
+GET /filters/5/1/2.ws
 ```
 ```json
 {
@@ -126,7 +126,7 @@ GET /items/filters/5/1/2.ws
 
 # Update a filter
 ```
-PUT /items/filters/5/3/7.ws
+PUT /filters/5/3/7.ws
 ```
 This will update the filter (in this case filter ID 7) based on the data passed:
 ```json
@@ -146,6 +146,6 @@ You'll receive a `200 OK` if the update was successful, or an error code and an 
 
 ### Delete a filter
 ```
-DELETE /items/filters/5/3/7.ws
+DELETE /filters/5/3/7.ws
 ```
 Will delete the filter with the given ID and return `200 OK` on success.
