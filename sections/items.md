@@ -5,7 +5,8 @@
 ## Available methods
 
 * `GET /items.ws` lists item types.
-* `GET /items/[type-id].ws` lists items of the given type.
+* `GET /items/[type-id].ws` lists items of the given type (paged by 30 items).
+* `GET /items/[type-id].ws?page=[number]` lists item on page [number].
 * `GET /items/[type-id]/[item-id].ws` fetches the item with the given ID.
 * `POST /items/[type-id].ws` creates an item of the given type.
 * `PUT /items/[type-id]/[item-id].ws` updates the item with the given ID.
