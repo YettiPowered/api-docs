@@ -322,18 +322,21 @@ and then pass the file itself as a base64 encoded string, `fileData`, inside the
 PUT /items/4/186.ws
 ```
 This will update the item with the given ID from the parameters passed.
+To update an item you must pass the `languageActive` field.
+
 ```json
 {
     "item": {
+        "resource": {
+            "languageActive": true,
+            …
+        }
         "assets": {
-            ...
+            …
         },
         "properties": {
-            ...
+            …
         }, 
-        "resource": {
-            ...
-        },
     }
 }
 ```
